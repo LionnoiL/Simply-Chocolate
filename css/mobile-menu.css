@@ -1,0 +1,10 @@
+.mobile-menu__close {
+  background-color: transparent;
+  border: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-menu_close-icon {
+  stroke: black;
+}

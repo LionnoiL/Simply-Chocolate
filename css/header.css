@@ -1,0 +1,39 @@
+.header .container {
+  max-width: 320px;
+  padding: 0 18px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.header_logo-accent {
+  font-style: italic;
+}
+
+.header__logo-icon {
+  fill: var(--action-hover);
+  stroke-width: 1.6px;
+  stroke: var(--action-primary);
+}
+
+.header__mobile-menu-button {
+  background-color: transparent;
+  border: 0;
+  width: 28px;
+  height: 28px;
+}
+
+.header__mobile-menu-icon {
+  stroke: black;
+}
