@@ -56,6 +56,10 @@ button {
   margin: -1px;
 }
 
+.none-display {
+  display: none;
+}
+
 body {
   display: flex;
   justify-content: center;
