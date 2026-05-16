@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -24,7 +30,7 @@
             <use href="./images/icons.svg#icon-chocolate"></use>
           </svg>
         </div>
-        <button class="header__mobile-menu-button">
+        <button class="header__mobile-menu-button" id="burger-menu-button">
           <svg class="header__mobile-menu-icon" width="28px" height="28px">
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
@@ -37,19 +43,32 @@
     <main>
       <section class="hero" id="hero">
         <div class="container">
-          <div class="hero__wrapper"></div>
-          <p>
-            Treat yourself or a loved one to our finest ingredients for a moment
-            of pure delight!
-          </p>
-          <div class="hero__controls">
-            <div class="hero__buttons">
-              <button class="mobile-accent">Buy now</button>
-              <button class="mobile-light">How it’s made</button>
-            </div>
-            <div class="hero_scroll">
-              <p class="hero__scroll-title">scroll down</p>
-              <button class="hero__scroll-down"></button>
+          <div class="hero__wrapper">
+            <p class="hero__main-title">
+              Treat yourself or a loved one to our finest ingredients for a
+              moment of pure delight!
+            </p>
+            <div class="hero__controls">
+              <div class="hero__buttons">
+                <button class="hero-controls_button mobile-accent">
+                  Buy now
+                </button>
+                <button class="hero-controls_button mobile-light">
+                  How it’s made
+                </button>
+              </div>
+              <div class="hero_scroll">
+                <p class="hero__scroll-title">scroll down</p>
+                <button class="hero__scroll-down">
+                  <svg
+                    class="hero__scroll-down-icon"
+                    width="22px"
+                    height="22px"
+                  >
+                    <use xlink:href="./images/icons.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -62,33 +81,72 @@
     <!-- #endregion Footer-->
 
     <!-- #region Mobile-Menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu">
       <div class="container">
-        <button class="mobile-menu__close">
+        <button class="mobile-menu__close" id="close-mobile-menu-button">
           <svg class="mobile-menu_close-icon" width="24px" height="24px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
         <ul class="mobile-menu_list">
-          <li class="mobile-menu_item">Home</li>
+          <li class="mobile-menu_item accent-color">Home</li>
           <li class="mobile-menu_item">How it’s made?</li>
           <li class="mobile-menu_item">Chocolate is loved</li>
         </ul>
-        <div class="mobile-menu__socials">
-          <ul class="mobile-menu__social-list">
-            <li class="mobile-menu__social-item">
-              <button class="mbile-menu__social-link"></button>
-            </li>
-            <li class="mobile-menu__social-item">
-              <button class="mbile-menu__social-link"></button>
-            </li>
-            <li class="mobile-menu__social-item">
-              <button class="mbile-menu__social-link"></button>
-            </li>
-          </ul>
-        </div>
+        <ul class="mobile-menu__social-list">
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="#">
+              <svg
+                class="mobile-menu__social-link-icon"
+                width="24px"
+                height="24px"
+              >
+                <use xlink:href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="#">
+              <svg
+                class="mobile-menu__social-link-icon"
+                width="24px"
+                height="24px"
+              >
+                <use xlink:href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="#">
+              <svg
+                class="mobile-menu__social-link-icon"
+                width="24px"
+                height="24px"
+              >
+                <use xlink:href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
+
+    <script>
+      const burgerMenuButtom = document.querySelector('#burger-menu-button');
+      const mobileMenu = document.querySelector('#mobile-menu');
+      const closeMobileMenuButton = document.querySelector(
+        '#close-mobile-menu-button'
+      );
+
+      burgerMenuButtom.addEventListener('click', () => {
+        mobileMenu.classList.add('is-open');
+      });
+
+      closeMobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+      });
+    </script>
+
     <!-- #endregion Mobile-Menu-->
   </body>
 </html>

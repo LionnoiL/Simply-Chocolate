@@ -1,0 +1,128 @@
+.hero {
+  padding-bottom: 40px;
+}
+
+.hero .container {
+  max-width: 375px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.hero__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 30px;
+  padding-block: 390px 20px;
+  padding-inline: 20px;
+  background-color: var(--element-disabled);
+  background-image:
+    url('../images/gradiemt.png'), url('../images/hero-bg_mob@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero__main-title {
+  font-weight: 500;
+  font-size: 20px;
+
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--surface-main);
+}
+
+.hero__controls {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.hero-controls_button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 14px;
+  border: 1px solid var(--surface-main);
+  border-radius: 100px;
+  padding-block: 12px;
+  padding-inline: 27px;
+  height: 42px;
+  width: 159px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--surface-main);
+}
+
+.mobile-accent {
+  border: 0;
+  background: var(--action-primary);
+  width: 120px;
+}
+
+.mobile-light {
+  background-color: transparent;
+}
+
+.hero_scroll {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.hero__scroll-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--surface-main);
+}
+
+.hero__scroll-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 19px;
+  width: 38px;
+  height: 38px;
+  background: var(--surface-main);
+  transform: rotate(-90deg);
+}
+
+.hero__scroll-down-icon {
+  fill: var(--action-primary);
+}
+
+@media (min-resolution: 192dpi) {
+  .hero__wrapper {
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_mob@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
