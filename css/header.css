@@ -43,6 +43,12 @@
   height: 28px;
 }
 
+.header__mobile-menu-button:hover .header__mobile-menu-icon,
+.header__mobile-menu-button:focus .header__mobile-menu-icon {
+  stroke: var(--action-primary);
+}
+
 .header__mobile-menu-icon {
   stroke: black;
+  transition: stroke 250ms ease-in-out;
 }
