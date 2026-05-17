@@ -1,0 +1,111 @@
+.bestsellers .container {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 16px;
+}
+
+.bestsellers__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-base);
+}
+
+.bestsellers__title-accent {
+  color: var(--action-primary);
+}
+
+.bestsellers__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.bestsellers__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+}
+
+.bestsellers__item.none-display {
+  display: none;
+}
+
+.bestsellers__item-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  border-radius: 16px 16px 0 0;
+  max-width: 368px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.bestsellers__item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    161deg,
+    rgba(253, 253, 255, 0.1) 0%,
+    rgba(8, 2, 21, 0.1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.bestsellers__item:hover .bestsellers__item-overlay {
+  transform: translateY(0);
+}
+
+.bestsellers__item:hover .bestsellers__item-wrapper,
+.bestsellers__item:hover .bestsellers__description {
+  box-shadow: 0 4px 10px 0 rgba(30, 24, 35, 0.2);
+}
+
+.bestsellers__overlay-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--surface-secondary);
+}
+
+.bestsellers__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-bottom: 1px solid var(--surface-overlay-light);
+  border-left: 1px solid var(--surface-overlay-light);
+  border-right: 1px solid var(--surface-overlay-light);
+  border-radius: 0 0 15px 15px;
+  padding: 28px;
+  background: var(--surface-main);
+  width: 100%;
+}
