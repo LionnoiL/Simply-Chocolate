@@ -1,0 +1,105 @@
+.reviews .container {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.reviews__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-base);
+}
+
+.reviews__title-accent {
+  color: var(--action-primary);
+}
+
+.reviews_list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.reviews__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--surface-overlay-light);
+  border-radius: 16px;
+  padding-block: 56px 24px;
+  padding-inline: 24px;
+  width: 343px;
+  height: 182px;
+  max-width: 360px;
+  box-shadow: 0 4px 10px 0 var(--surface-overlay-light);
+  background: var(--surface-main);
+  position: relative;
+}
+
+.reviews__list-item.none-display {
+  display: none;
+}
+
+.reviews__item-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reviews__item-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+  color: var(--text-base);
+}
+
+.reviews__item-review {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.reviews__leave-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  background-color: transparent;
+  border: 1px solid var(--action-primary);
+  border-radius: 100px;
+  padding-block: 12px;
+  padding-inline: 28px;
+  width: 165px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: var(--text-base);
+  transition:
+    background-color 250ms ease-in-out,
+    color 250ms ease-in-out;
+}
+
+.reviews__leave-button:hover {
+  background-color: var(--action-primary);
+  color: var(--surface-main);
+}
