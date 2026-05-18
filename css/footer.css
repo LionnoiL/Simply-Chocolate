@@ -1,0 +1,206 @@
+.footer .container {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0;
+  padding: 32px 16px 32px 16px;
+  background: var(--surface-contrast);
+}
+
+.footer__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  border-bottom: 1px solid var(--surface-glass-effect);
+  padding-block: 0px 32px;
+  padding-inline: 0px;
+}
+
+.footer__slogan {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--surface-main);
+}
+
+.footer__slogan-accent {
+  color: var(--action-primary);
+}
+
+.footer__networks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer__networks-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--surface-main);
+}
+
+.footer__networks-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.footer__network-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  border: 1px solid var(--surface-glass-effect);
+  border-radius: 10px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__social-link-icon {
+  fill: var(--surface-main);
+}
+
+.footer__contacts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer_contacts-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--surface-main);
+}
+
+.footer__contacts-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__contact-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--surface-main);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  padding-block: 32px 0px;
+  padding-inline: 0px;
+  width: 100%;
+}
+
+.footer__menu {
+}
+
+.footer_menu-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer__menu-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--surface-main);
+}
+
+.footer__subscribe-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  max-width: 368px;
+}
+
+.footer__email-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0px;
+  border: 1.5px solid var(--surface-glass-effect);
+  border-radius: 30px;
+  padding-block: 13px;
+  padding-inline: 24px;
+  width: 207px;
+  height: 46px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--surface-main);
+  transition: border-color 250ms ease-in-out;
+}
+
+.footer__email-input::placeholder {
+  color: var(--surface-main);
+}
+
+.footer__email-input:hover,
+.footer__email-input:focus {
+  border-color: var(--action-primary);
+}
+
+.footer__submit-bitton {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 14px;
+  border: 0;
+  border-radius: 100px;
+  padding-block: 12px;
+  padding-inline: 28px;
+  width: 128px;
+  height: 42px;
+  background: var(--action-primary);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--surface-main);
+  transition:
+    background 250ms ease-in-out,
+    color 250ms ease-in-out;
+}
+
+.footer__submit-bitton:hover {
+  background-color: var(--action-hover);
+  color: var(--action-primary);
+}
