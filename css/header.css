@@ -1,12 +1,7 @@
 .header .container {
-  max-width: 375px;
   padding-block: 18px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  gap: 0px;
 }
 
 .header__logo {

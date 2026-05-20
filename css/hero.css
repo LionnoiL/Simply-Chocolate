@@ -1,14 +1,5 @@
-.hero {
-  padding-bottom: 40px;
-}
-
 .hero .container {
-  max-width: 375px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .hero__wrapper {

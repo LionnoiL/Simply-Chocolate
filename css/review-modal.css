@@ -1,0 +1,219 @@
+.review-modal {
+  background-color: var(--text-muted);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+}
+
+.review-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.review-modal .container {
+  gap: 32px;
+  border-radius: 15px;
+  padding-block: 32px;
+  padding-inline: 24px;
+  max-width: 312px;
+  background: var(--surface-secondary);
+  position: relative;
+}
+
+.review-modal__close {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: 0;
+}
+
+.review-modal__close .close-icon {
+  stroke-width: 2px;
+  stroke: var(--text-base);
+}
+
+.review-modal__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--text-base);
+}
+
+.review-modal__title-accent {
+  color: var(--action-primary);
+}
+
+.review-modal__form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.review-form__fields {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 14px;
+  border: 0;
+  background-color: inherit;
+  width: 100%;
+  padding: 0;
+}
+
+.review-form__input-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--text-muted);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper__icon {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 16px;
+  fill: transparent;
+  stroke-width: 1.5px;
+  stroke: var(--text-secondary);
+  transition: stroke 250ms ease-in-out;
+}
+
+.review-form__input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 21px;
+  border: 1px solid var(--surface-overlay-light);
+  border-radius: 8px;
+  padding-block: 10px;
+  padding-inline: 44px;
+  width: 100%;
+}
+
+textarea.review-form__input {
+  display: block;
+  padding-block: 14px;
+  padding-inline: 18px;
+  resize: none;
+}
+
+.review-form__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+#agreement {
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+}
+
+.review-form__agreement-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agreement-chckbox__wrapper {
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.agreement-checkbox__icon {
+  opacity: 0;
+  fill: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+#agreement:checked + .review-form__agreement-label .agreement-checkbox__icon {
+  opacity: 1;
+}
+
+#agreement:checked + .review-form__agreement-label .agreement-chckbox__wrapper {
+  border: 0;
+}
+
+.agreement-chckbox__wrapper {
+  display: flex;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 250ms ease-in-out;
+}
+
+.review-form__agreement-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: var(--text-muted);
+}
+
+.review-form__policy-link {
+  color: var(--action-primary);
+}
+
+.review-form__submit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 14px;
+  border-radius: 100px;
+  padding-block: 12px;
+  padding-inline: 28px;
+  width: 93px;
+  height: 42px;
+  background: var(--action-primary);
+  border: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--surface-main);
+}
