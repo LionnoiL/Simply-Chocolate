@@ -58,3 +58,20 @@
   letter-spacing: -0.02em;
   color: var(--text-contrast-muted);
 }
+
+@media screen AND (min-width: 768px) {
+  .benefits .container {
+    padding: 50px 0 50px 0;
+  }
+
+  .benefits__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 88px;
+    row-gap: 44px;
+  }
+
+  .benefits__item {
+    width: calc((100% - 88px) / 2);
+  }
+}
