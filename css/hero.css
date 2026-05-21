@@ -152,3 +152,20 @@
     background-size: cover;
   }
 }
+
+@media screen AND (min-width: 768px) {
+  .hero__wrapper {
+    padding-block: 600px 40px;
+    padding-inline: 40px;
+  }
+
+  .hero__main-title {
+    font-size: 28px;
+  }
+
+  .hero__controls {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

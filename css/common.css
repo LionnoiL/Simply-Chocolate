@@ -90,3 +90,15 @@ body {
 .accent-color {
   color: var(--action-primary);
 }
+
+@media screen AND (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+
+@media screen AND (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
+}

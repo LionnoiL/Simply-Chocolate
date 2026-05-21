@@ -68,6 +68,10 @@
   margin-right: 28px;
 }
 
+.ingridients__list-item:nth-child(even) .ingridients__item-subtitle {
+  color: var(--text-base);
+}
+
 .ingridients__item-icon {
   stroke: var(--action-primary);
   fill: transparent;
@@ -78,4 +82,19 @@
 
 .ingridients__list-item:nth-child(odd) .ingridients__item-icon {
   stroke: var(--surface-secondary);
+}
+
+@media screen AND (min-width: 768px) {
+  .ingridients__title {
+    max-width: 412px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  .ingridients__list {
+    justify-content: flex-start;
+  }
+
+  .ingridients__list-item.none-display {
+    display: flex;
+  }
 }
