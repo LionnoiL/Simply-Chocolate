@@ -169,6 +169,7 @@
 .footer__email-input:hover,
 .footer__email-input:focus {
   border-color: var(--action-primary);
+  outline: none;
 }
 
 .footer__submit-bitton {

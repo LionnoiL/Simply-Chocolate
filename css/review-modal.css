@@ -119,6 +119,12 @@
   padding-block: 10px;
   padding-inline: 44px;
   width: 100%;
+  transition: border-color 250ms ease-in-out;
+}
+
+.review-form__input:focus {
+  border-color: var(--action-primary);
+  outline: none;
 }
 
 textarea.review-form__input {
