@@ -94,3 +94,24 @@
   gap: 0px;
   background: var(--surface-secondary);
 }
+
+@media screen AND (min-width: 768px) {
+  .products .container {
+    padding: 50px 16px 50px 16px;
+    gap: 50px;
+  }
+
+  .product__title {
+    font-size: 24px;
+  }
+
+  .product__list-item {
+    max-width: calc((100% - 18px) / 2);
+  }
+}
+
+@media screen AND (min-width: 1200px) {
+  .product__list-item {
+    max-width: calc((100% - 54px) / 4);
+  }
+}
