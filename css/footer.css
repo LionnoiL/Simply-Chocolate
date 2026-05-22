@@ -182,8 +182,6 @@
   border-radius: 100px;
   padding-block: 12px;
   padding-inline: 28px;
-  width: 128px;
-  height: 42px;
   background: var(--action-primary);
   font-weight: 600;
   font-size: 14px;
@@ -197,4 +195,49 @@
 .footer__submit-bitton:hover {
   background-color: var(--action-hover);
   color: var(--action-primary);
+}
+
+@media screen AND (min-width: 768px) {
+  .footer .container {
+    padding: 50px 32px 50px 32px;
+  }
+
+  .footer__top {
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 48px;
+  }
+
+  .footer__slogan {
+    font-size: 28px;
+    max-width: 300px;
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 24px;
+    gap: 0;
+  }
+
+  .footer_menu-list {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .footer__menu {
+    align-self: center;
+  }
+}
+
+@media screen AND (min-width: 1200px) {
+  .footer__top {
+    justify-content: space-between;
+  }
+
+  .footer__networks {
+    margin-left: auto;
+    margin-right: 90px;
+  }
 }
