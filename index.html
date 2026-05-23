@@ -99,7 +99,7 @@
               </div>
               <div class="hero_scroll">
                 <p class="hero__scroll-title">scroll down</p>
-                <button class="hero__scroll-down">
+                <button class="hero__scroll-down" id="scroll-down-button">
                   <svg
                     class="hero__scroll-down-icon"
                     width="22px"
@@ -789,10 +789,10 @@
     </div>
 
     <script>
-      const burgerMenuButtom = document.querySelector('#burger-menu-button');
-      const mobileMenu = document.querySelector('#mobile-menu');
-      const closeMobileMenuButton = document.querySelector(
-        '#close-mobile-menu-button'
+      const burgerMenuButtom = document.getElementById('burger-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeMobileMenuButton = document.getElementById(
+        'close-mobile-menu-button'
       );
 
       burgerMenuButtom.addEventListener('click', () => {
@@ -801,6 +801,16 @@
 
       closeMobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.remove('is-open');
+      });
+
+      const scrollBtn = document.getElementById('scroll-down-button');
+      const targetSection = document.getElementById('made');
+
+      scrollBtn.addEventListener('click', () => {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
       });
     </script>
 
