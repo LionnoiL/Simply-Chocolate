@@ -37,10 +37,12 @@
               <a class="header__menu-link" href="#">Home</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">How it&rsquo;s made?</a>
+              <a class="header__menu-link" href="#made">How it&rsquo;s made?</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">Chocolate is loved</a>
+              <a class="header__menu-link" href="#reviews"
+                >Chocolate is loved</a
+              >
             </li>
           </ul>
         </nav>
@@ -572,7 +574,7 @@
           </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <h2 class="reviews__title">
             <span class="accent-color">Chocolate</span> is loved
@@ -706,10 +708,14 @@
                 <a href="#" class="footer__menu-link">Home</a>
               </li>
               <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">How it&rsquo;s made?</a>
+                <a href="#made" class="footer__menu-link"
+                  >How it&rsquo;s made?</a
+                >
               </li>
               <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Chocolate is loved</a>
+                <a href="#reviews" class="footer__menu-link"
+                  >Chocolate is loved</a
+                >
               </li>
             </ul>
           </nav>
@@ -744,10 +750,10 @@
             <a href="#" class="mobile__menu-link">Home</a>
           </li>
           <li class="mobile-menu_item">
-            <a href="#" class="mobile__menu-link">How it&rsquo;s made?</a>
+            <a href="#made" class="mobile__menu-link">How it&rsquo;s made?</a>
           </li>
           <li class="mobile-menu_item">
-            <a href="#" class="mobile__menu-link">Chocolate is loved</a>
+            <a href="#reviews" class="mobile__menu-link">Chocolate is loved</a>
           </li>
         </ul>
         <ul class="mobile-menu__social-list">
@@ -797,20 +803,19 @@
 
       burgerMenuButtom.addEventListener('click', () => {
         mobileMenu.classList.add('is-open');
+        document.body.classList.add('no-scroll');
       });
 
       closeMobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.remove('is-open');
+        document.body.classList.remove('no-scroll');
       });
 
-      const scrollBtn = document.getElementById('scroll-down-button');
-      const targetSection = document.getElementById('made');
-
-      scrollBtn.addEventListener('click', () => {
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+      mobileMenu.addEventListener('click', function (event) {
+        if (event.target.classList.contains('mobile__menu-link')) {
+          mobileMenu.classList.remove('is-open');
+          document.body.classList.remove('no-scroll');
+        }
       });
     </script>
 
@@ -916,13 +921,26 @@
 
       addReviewButton.addEventListener('click', () => {
         modalOverlay.classList.add('is-open');
+        document.body.classList.add('no-scroll');
       });
 
       closeButton.addEventListener('click', () => {
         modalOverlay.classList.remove('is-open');
+        document.body.classList.remove('no-scroll');
       });
     </script>
 
     <!-- #endregion Modal-->
+    <script>
+      const scrollBtn = document.getElementById('scroll-down-button');
+      const targetSection = document.getElementById('made');
+
+      scrollBtn.addEventListener('click', () => {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      });
+    </script>
   </body>
 </html>
