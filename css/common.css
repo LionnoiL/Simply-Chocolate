@@ -43,6 +43,10 @@ a {
   font-style: normal;
 }
 
+address {
+  font-style: normal;
+}
+
 ul {
   list-style-type: none;
 }
