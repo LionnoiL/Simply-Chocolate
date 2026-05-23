@@ -90,7 +90,8 @@
     color 250ms ease-in-out;
 }
 
-.reviews__leave-button:hover {
+.reviews__leave-button:hover,
+.reviews__leave-button:focus {
   background-color: var(--action-primary);
   color: var(--surface-main);
 }

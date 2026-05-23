@@ -154,6 +154,13 @@
   .hero__wrapper {
     padding-block: 600px 40px;
     padding-inline: 40px;
+
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_tab@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .hero__main-title {
@@ -165,5 +172,50 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 768px) {
+  .hero__wrapper {
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_tab@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen AND (min-width: 1200px) {
+  .hero__wrapper {
+    padding-block: 380px 40px;
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_desktop@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero__main-title {
+    font-size: 28px;
+    max-width: 484px;
+  }
+
+  .hero__controls {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 1200px) {
+  .hero__wrapper {
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_desktop@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

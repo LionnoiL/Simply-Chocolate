@@ -42,6 +42,12 @@
 .mobile-menu_close-icon {
   stroke-width: 2px;
   stroke: var(--surface-main);
+  transition: stroke 250ms ease-in-out;
+}
+
+.mobile-menu_close-icon:hover,
+.mobile-menu_close-icon:focus {
+  stroke: var(--action-primary);
 }
 
 .mobile-menu_list {
@@ -56,6 +62,16 @@
   line-height: 1.2;
   letter-spacing: -0.03em;
   color: var(--surface-main);
+}
+
+.mobile__menu-link {
+  color: inherit;
+  transition: color 250ms ease-in-out;
+}
+
+.mobile__menu-link:hover,
+.mobile__menu-link:focus {
+  color: var(--action-primary);
 }
 
 .mobile-menu__socials {
@@ -83,8 +99,22 @@
   width: 40px;
   height: 40px;
   background: transparent;
+  transition:
+    fill 250ms ease-in-out,
+    border-color 250ms ease-in-out;
 }
 
 .mobile-menu__social-link-icon {
   fill: var(--surface-main);
+  transition: fill 250ms ease-in-out;
+}
+
+.mobile-menu__social-item:hover .mobile-menu__social-link-icon,
+.mobile-menu__social-item:hover .mobile-menu__social-link-icon {
+  fill: var(--action-primary);
+}
+
+.mobile-menu__social-item:hover .mobile-menu__social-link,
+.mobile-menu__social-item:hover .mobile-menu__social-link {
+  border-color: var(--action-primary);
 }

@@ -13,10 +13,6 @@
   color: var(--text-base);
 }
 
-.bestsellers__title-accent {
-  color: var(--action-primary);
-}
-
 .bestsellers__list {
   display: flex;
   align-items: center;

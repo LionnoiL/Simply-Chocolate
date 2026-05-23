@@ -22,10 +22,6 @@
   color: var(--surface-main);
 }
 
-.footer__slogan-accent {
-  color: var(--action-primary);
-}
-
 .footer__networks {
   display: flex;
   align-items: flex-start;
@@ -62,10 +58,22 @@
   padding: 8px;
   width: 40px;
   height: 40px;
+  transition: border-color 250ms ease-in-out;
 }
 
 .footer__social-link-icon {
   fill: var(--surface-main);
+  transition: fill 250ms ease-in-out;
+}
+
+.footer__network-item:hover .footer__social-link-icon,
+.footer__network-item:focus .footer__social-link-icon {
+  fill: var(--action-primary);
+}
+
+.footer__network-item:hover,
+.footer__network-item:focus {
+  border-color: var(--action-primary);
 }
 
 .footer__contacts {
@@ -100,6 +108,12 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--surface-main);
+  transition: color 250ms ease-in-out;
+}
+
+.footer__contact-link:hover,
+.footer__contact-link:focus {
+  color: var(--action-primary);
 }
 
 .footer__bottom {
@@ -111,9 +125,6 @@
   padding-block: 32px 0px;
   padding-inline: 0px;
   width: 100%;
-}
-
-.footer__menu {
 }
 
 .footer_menu-list {
@@ -130,6 +141,16 @@
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: var(--surface-main);
+}
+
+.footer__menu-link {
+  color: inherit;
+  transition: color 250ms ease-in-out;
+}
+
+.footer__menu-link:hover,
+.footer__menu-link:focus {
+  color: var(--action-primary);
 }
 
 .footer__subscribe-form {
@@ -152,7 +173,6 @@
   padding-block: 13px;
   padding-inline: 24px;
   width: 207px;
-  height: 46px;
   background-color: transparent;
   font-weight: 400;
   font-size: 14px;
@@ -192,7 +212,8 @@
     color 250ms ease-in-out;
 }
 
-.footer__submit-bitton:hover {
+.footer__submit-bitton:hover,
+.footer__submit-bitton:focus {
   background-color: var(--action-hover);
   color: var(--action-primary);
 }

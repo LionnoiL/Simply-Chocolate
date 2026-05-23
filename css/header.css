@@ -80,6 +80,12 @@
     line-height: 1.29;
     letter-spacing: -0.02em;
     color: var(--text-base);
+    transition: color 250ms ease-in-out;
+  }
+
+  .header__menu-link:hover,
+  .header__menu-link:focus {
+    color: var(--action-primary);
   }
 
   .header__networks-list {
@@ -102,10 +108,22 @@
     width: 40px;
     height: 40px;
     background-color: transparent;
+    transition: border-color 250ms ease-in-out;
   }
 
   .header__social-link-icon {
     fill: var(--text-base);
+    transition: fill 250ms ease-in-out;
+  }
+
+  .header__network-item:hover .header__social-link-icon,
+  .header__network-item:focus .header__social-link-icon {
+    fill: var(--action-primary);
+  }
+
+  .header__network-item:hover .header__network-link,
+  .header__network-item:focus .header__network-link {
+    border-color: var(--action-primary);
   }
 
   .header__mobile-menu-button {
