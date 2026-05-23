@@ -33,10 +33,8 @@
   border-radius: 15px;
   padding-block: 32px 28px;
   padding-inline: 28px;
-  width: 336px;
   height: 272px;
   min-width: 260px;
-  max-width: 336px;
   border: 1px solid var(--action-primary);
   background-color: var(--surface-main);
 }
@@ -86,11 +84,22 @@
     font-size: 24px;
     line-height: 1.17;
   }
+
   .ingridients__list {
     justify-content: flex-start;
   }
 
+  .ingridients__list-item {
+    width: calc((100% - 32px) / 2);
+  }
+
   .ingridients__list-item.none-display {
     display: flex;
+  }
+}
+
+@media screen AND (min-width: 1200px) {
+  .ingridients__list-item {
+    width: calc((100% - 64px) / 3);
   }
 }
