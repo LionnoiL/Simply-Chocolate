@@ -49,6 +49,11 @@
 .review-modal__close .close-icon {
   stroke-width: 2px;
   stroke: var(--text-base);
+  transition: stroke 250ms ease-in-out;
+}
+
+.review-modal__close:hover .close-icon {
+  stroke: var(--action-primary);
 }
 
 .review-modal__title {
@@ -58,10 +63,6 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--text-base);
-}
-
-.review-modal__title-accent {
-  color: var(--action-primary);
 }
 
 .review-modal__form {
@@ -125,6 +126,10 @@
 .review-form__input:focus {
   border-color: var(--action-primary);
   outline: none;
+}
+
+.review-form__input:focus + .input-wrapper__icon {
+  stroke: var(--action-primary);
 }
 
 textarea.review-form__input {
@@ -201,10 +206,6 @@ textarea.review-form__input {
   color: var(--text-muted);
 }
 
-.review-form__policy-link {
-  color: var(--action-primary);
-}
-
 .review-form__submit {
   display: flex;
   align-items: flex-start;
@@ -222,4 +223,15 @@ textarea.review-form__input {
   font-size: 14px;
   line-height: 1.29;
   color: var(--surface-main);
+}
+
+@media screen AND (min-width: 768px) {
+  .review-modal .container {
+    min-width: 518px;
+  }
+
+  .review-modal__title {
+    max-width: 300px;
+    align-self: flex-start;
+  }
 }

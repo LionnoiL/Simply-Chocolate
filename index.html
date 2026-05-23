@@ -175,7 +175,7 @@
         <div class="container">
           <h2 class="ingridients__title">
             It all adds up to one exceptional
-            <span class="ingridients__title-accent">taste</span> sensation
+            <span class="accent-color">taste</span> sensation
           </h2>
           <ul class="ingridients__list">
             <li class="ingridients__list-item">
@@ -291,7 +291,7 @@
         <div class="container">
           <h2 class="made__title">
             How it&rsquo;s
-            <span class="made__title-accent">made</span>
+            <span class="accent-color">made</span>
             ?
           </h2>
           <div class="made__wrapper">
@@ -338,7 +338,7 @@
       <section class="products">
         <div class="container">
           <h2 class="product__title">
-            Our <span class="product__title-accent">products</span>
+            Our <span class="accent-color">products</span>
           </h2>
           <ul class="product__list">
             <li class="product__list-item">
@@ -507,7 +507,7 @@
       <section class="bestsellers" id="bestsellers">
         <div class="container">
           <h2 class="bestsellers__title">
-            <span class="bestsellers__title-accent">Top</span> sellers
+            <span class="accent-color">Top</span> sellers
           </h2>
           <ul class="bestsellers__list">
             <li class="bestsellers__item">
@@ -575,7 +575,7 @@
       <section class="reviews">
         <div class="container">
           <h2 class="reviews__title">
-            <span class="reviews__title-accent">Chocolate</span> is loved
+            <span class="accent-color">Chocolate</span> is loved
           </h2>
           <ul class="reviews_list">
             <li class="reviews__list-item">
@@ -640,8 +640,8 @@
       <div class="container">
         <div class="footer__top">
           <p class="footer__slogan">
-            <span class="footer__slogan-accent">Chocolate</span> a delicious
-            cure for a bad day
+            <span class="accent-color">Chocolate</span> a delicious cure for a
+            bad day
           </p>
           <div class="footer__networks">
             <p class="footer__networks-title">Social networks</p>
@@ -702,9 +702,15 @@
         <div class="footer__bottom">
           <nav class="footer__menu">
             <ul class="footer_menu-list">
-              <li class="footer__menu-item">Home</li>
-              <li class="footer__menu-item">How it&rsquo;s made?</li>
-              <li class="footer__menu-item">Chocolate is loved</li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Home</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">How it&rsquo;s made?</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Chocolate is loved</a>
+              </li>
             </ul>
           </nav>
           <form action="#" class="footer__subscribe-form">
@@ -734,9 +740,15 @@
           </svg>
         </button>
         <ul class="mobile-menu_list">
-          <li class="mobile-menu_item accent-color">Home</li>
-          <li class="mobile-menu_item">How it&rsquo;s made?</li>
-          <li class="mobile-menu_item">Chocolate is loved</li>
+          <li class="mobile-menu_item accent-color">
+            <a href="#" class="mobile__menu-link">Home</a>
+          </li>
+          <li class="mobile-menu_item">
+            <a href="#" class="mobile__menu-link">How it&rsquo;s made?</a>
+          </li>
+          <li class="mobile-menu_item">
+            <a href="#" class="mobile__menu-link">Chocolate is loved</a>
+          </li>
         </ul>
         <ul class="mobile-menu__social-list">
           <li class="mobile-menu__social-item">
@@ -805,7 +817,7 @@
         </button>
         <div class="review-modal__title">
           LEAVE A REVIEW ABOUT
-          <span class="review-modal__title-accent">OUR CHOCOLATE</span>
+          <span class="accent-color">OUR CHOCOLATE</span>
         </div>
         <form class="review-modal__form" action="#">
           <fieldset class="review-form__fields">
@@ -813,15 +825,15 @@
               >Name</label
             >
             <div class="input-wrapper">
-              <svg class="input-wrapper__icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-user_sm"></use>
-              </svg>
               <input
                 type="text"
                 id="review-name"
                 name="name"
                 class="review-form__input"
               >
+              <svg class="input-wrapper__icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-user_sm"></use>
+              </svg>
             </div>
 
             <label for="review-email" class="review-form__input-label"
@@ -829,30 +841,28 @@
             >
 
             <div class="input-wrapper">
-              <svg class="input-wrapper__icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-email_sm"></use>
-              </svg>
               <input
                 type="email"
                 id="review-email"
                 name="email"
                 class="review-form__input"
-              >
+              ><svg class="input-wrapper__icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email_sm"></use>
+              </svg>
             </div>
 
             <label for="review-phone" class="review-form__input-label"
               >Phone number</label
             >
             <div class="input-wrapper">
-              <svg class="input-wrapper__icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone_sm"></use>
-              </svg>
               <input
                 type="tel"
                 id="review-phone"
                 name="tel"
                 class="review-form__input"
-              >
+              ><svg class="input-wrapper__icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone_sm"></use>
+              </svg>
             </div>
 
             <label for="review-comment" class="review-form__input-label"
@@ -877,7 +887,7 @@
 
                 <span class="review-form__agreement-text">
                   I accept the terms and conditions of the
-                  <a class="review-form__policy-link" href="#"
+                  <a class="review-form__policy-link accent-color" href="#"
                     >Privacy Policy</a
                   >
                 </span>

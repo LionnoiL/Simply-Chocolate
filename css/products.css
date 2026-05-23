@@ -14,10 +14,6 @@
   color: var(--text-base);
 }
 
-.product__title-accent {
-  color: var(--action-primary);
-}
-
 .product__list {
   display: flex;
   flex-wrap: wrap;

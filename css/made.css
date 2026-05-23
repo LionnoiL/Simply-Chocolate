@@ -14,10 +14,6 @@
   color: var(--text-base);
 }
 
-.made__title-accent {
-  color: var(--action-primary);
-}
-
 .made__wrapper {
   display: flex;
   align-items: center;

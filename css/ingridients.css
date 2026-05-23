@@ -14,10 +14,6 @@
   color: var(--text-base);
 }
 
-.ingridients__title-accent {
-  color: var(--action-primary);
-}
-
 .ingridients__list {
   display: flex;
   flex-wrap: wrap;
