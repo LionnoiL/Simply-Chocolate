@@ -19,6 +19,55 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
+
+  @media (min-resolution: 192dpi) {
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_mob@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen AND (min-width: 768px) {
+    padding-block: 600px 40px;
+    padding-inline: 40px;
+
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_tab@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 768px) {
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_tab@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen AND (min-width: 1200px) {
+    padding-block: 380px 40px;
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_desktop@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 1200px) {
+    background-color: var(--element-disabled);
+    background-image:
+      url('../images/gradiemt.png'), url('../images/hero-bg_desktop@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .hero__main-title {
@@ -28,6 +77,16 @@
   line-height: 1.2;
   letter-spacing: -0.03em;
   color: var(--surface-main);
+
+  @media screen AND (min-width: 768px) {
+    font-size: 28px;
+    max-width: 484px;
+  }
+
+  @media screen AND (min-width: 1200px) {
+    font-size: 28px;
+    max-width: 484px;
+  }
 }
 
 .hero__controls {
@@ -36,6 +95,18 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 32px;
+
+  @media screen AND (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media screen AND (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .hero__buttons {
@@ -61,29 +132,27 @@
   line-height: 1.29;
   color: var(--surface-main);
   transition:
-    background-color 250ms ease-in-out,
-    color 250ms ease-in-out;
+    background-color var(--transition250),
+    color var(--transition250);
 }
 
 .mobile-accent {
   border: 0;
   background: var(--action-primary);
-}
 
-.mobile-accent:hover,
-.mobile-accent:focus {
-  background-color: var(--action-hover);
-  color: var(--action-primary);
+  &:is(:hover, :focus) {
+    background-color: var(--action-hover);
+    color: var(--action-primary);
+  }
 }
 
 .mobile-light {
   background-color: transparent;
-}
 
-.mobile-light:hover,
-.mobile-light:focus {
-  border: 1px solid var(--action-primary);
-  color: var(--action-primary);
+  &:is(:hover, :focus) {
+    border: 1px solid var(--action-primary);
+    color: var(--action-primary);
+  }
 }
 
 .hero_scroll {
@@ -92,6 +161,10 @@
   justify-content: flex-start;
   flex-direction: row;
   gap: 14px;
+
+  &:is(:hover, :focus) .hero__scroll-title {
+    color: var(--action-primary);
+  }
 }
 
 .hero__scroll-title {
@@ -100,12 +173,7 @@
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: var(--surface-main);
-  transition: color 250ms ease-in-out;
-}
-
-.hero_scroll:has(.hero__scroll-down:hover) .hero__scroll-title,
-.hero_scroll:has(.hero__scroll-down:focus) .hero__scroll-title {
-  color: var(--action-primary);
+  transition: color var(--transition250);
 }
 
 .hero__scroll-down {
@@ -120,102 +188,19 @@
   height: 38px;
   background: var(--surface-main);
   transition:
-    background-color 250ms ease-in-out,
-    color 250ms ease-in-out;
-}
+    background-color var(--transition250),
+    color var(--transition250);
 
-.hero__scroll-down:hover,
-.hero__scroll-down:focus {
-  background: var(--action-primary);
+  &:is(:hover, :focus) {
+    background: var(--action-primary);
+  }
+
+  &:is(:hover, :focus) .hero__scroll-down-icon {
+    fill: var(--surface-main);
+  }
 }
 
 .hero__scroll-down-icon {
   fill: var(--action-primary);
-  transition: fill 250ms ease-in-out;
-}
-
-.hero__scroll-down:hover .hero__scroll-down-icon,
-.hero__scroll-down:focus .hero__scroll-down-icon {
-  fill: var(--surface-main);
-}
-
-@media (min-resolution: 192dpi) {
-  .hero__wrapper {
-    background-color: var(--element-disabled);
-    background-image:
-      url('../images/gradiemt.png'), url('../images/hero-bg_mob@2x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-@media screen AND (min-width: 768px) {
-  .hero__wrapper {
-    padding-block: 600px 40px;
-    padding-inline: 40px;
-
-    background-color: var(--element-disabled);
-    background-image:
-      url('../images/gradiemt.png'), url('../images/hero-bg_tab@1x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .hero__main-title {
-    font-size: 28px;
-    max-width: 484px;
-  }
-
-  .hero__controls {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-
-@media (min-resolution: 192dpi) and (min-width: 768px) {
-  .hero__wrapper {
-    background-color: var(--element-disabled);
-    background-image:
-      url('../images/gradiemt.png'), url('../images/hero-bg_tab@2x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-@media screen AND (min-width: 1200px) {
-  .hero__wrapper {
-    padding-block: 380px 40px;
-    background-color: var(--element-disabled);
-    background-image:
-      url('../images/gradiemt.png'), url('../images/hero-bg_desktop@1x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .hero__main-title {
-    font-size: 28px;
-    max-width: 484px;
-  }
-
-  .hero__controls {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-
-@media (min-resolution: 192dpi) and (min-width: 1200px) {
-  .hero__wrapper {
-    background-color: var(--element-disabled);
-    background-image:
-      url('../images/gradiemt.png'), url('../images/hero-bg_desktop@2x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+  transition: fill var(--transition250);
 }
